@@ -4,8 +4,27 @@
 \alias{pdose_direct_solver}
 \title{pdose_direct_solver}
 \usage{
-pdose_direct_solver(B, X, A, a_dist, a_seq, R, lambda, bw, rho, eta, gamma,
-  tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+pdose_direct_solver(
+  B,
+  X,
+  A,
+  a_dist,
+  a_seq,
+  R,
+  lambda,
+  bw,
+  rho,
+  eta,
+  gamma,
+  tau,
+  epsilon,
+  btol,
+  ftol,
+  gtol,
+  maxitr,
+  verbose,
+  ncore
+)
 }
 \arguments{
 \item{B}{A matrix of the parameters \code{B}, the columns are subject to the orthogonality constraint}

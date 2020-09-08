@@ -4,8 +4,23 @@
 \alias{save_solver}
 \title{semi-save solver \code{C++} function}
 \usage{
-save_solver(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol,
-  maxitr, verbose, ncore)
+save_solver(
+  B,
+  X,
+  Y,
+  bw,
+  rho,
+  eta,
+  gamma,
+  tau,
+  epsilon,
+  btol,
+  ftol,
+  gtol,
+  maxitr,
+  verbose,
+  ncore
+)
 }
 \arguments{
 \item{B}{A matrix of the parameters \code{B}, the columns are subject to the orthogonality constraint}

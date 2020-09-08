@@ -4,7 +4,8 @@
 \name{skcm.clinical}
 \alias{skcm.clinical}
 \title{Skin Cutaneous Melanoma Data set}
-\format{Contains 469 subjects with 156 failures. Each row contains one subject,
+\format{
+Contains 469 subjects with 156 failures. Each row contains one subject,
 subject ID is indicated by row name. Variables include:
 \itemize{
 \item \code{Time}
@@ -13,7 +14,8 @@ subject ID is indicated by row name. Variables include:
 \item \code{Age}
 }
 
-\strong{Note:} \code{Age} has 8 missing values.}
+\strong{Note:} \code{Age} has 8 missing values.
+}
 \usage{
 skcm.clinical
 }

@@ -4,8 +4,10 @@
 \name{skcm.melgene}
 \alias{skcm.melgene}
 \title{Genes associated with Melanoma given by the MelGene Database}
-\format{Each row contains one subject, subject ID is indicated by row name.
-Gene names in the columns. The columns are scaled.}
+\format{
+Each row contains one subject, subject ID is indicated by row name.
+Gene names in the columns. The columns are scaled.
+}
 \usage{
 skcm.melgene
 }

@@ -4,8 +4,27 @@
 \alias{pdose_semi_solver}
 \title{pdose_semi_solver}
 \usage{
-pdose_semi_solver(B, X, R, A, a_dist, a_seq, lambda, bw, rho, eta, gamma,
-  tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+pdose_semi_solver(
+  B,
+  X,
+  R,
+  A,
+  a_dist,
+  a_seq,
+  lambda,
+  bw,
+  rho,
+  eta,
+  gamma,
+  tau,
+  epsilon,
+  btol,
+  ftol,
+  gtol,
+  maxitr,
+  verbose,
+  ncore
+)
 }
 \arguments{
 \item{B}{A matrix of the parameters \code{B}, the columns are subject to the orthogonality constraint}

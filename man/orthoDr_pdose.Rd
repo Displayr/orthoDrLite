@@ -4,10 +4,22 @@
 \alias{orthoDr_pdose}
 \title{Direct Learning & Pseudo-direct Learning Model}
 \usage{
-orthoDr_pdose(x, a, r, ndr = ndr, B.initial = NULL, bw = NULL,
-  lambda = 0.1, K = sqrt(length(r)), method = c("direct",
-  "pseudo_direct"), keep.data = FALSE, control = list(),
-  maxitr = 500, verbose = FALSE, ncore = 0)
+orthoDr_pdose(
+  x,
+  a,
+  r,
+  ndr = ndr,
+  B.initial = NULL,
+  bw = NULL,
+  lambda = 0.1,
+  K = sqrt(length(r)),
+  method = c("direct", "pseudo_direct"),
+  keep.data = FALSE,
+  control = list(),
+  maxitr = 500,
+  verbose = FALSE,
+  ncore = 0
+)
 }
 \arguments{
 \item{x}{A \code{matrix} or \code{data.frame} for features (continuous only).}
@@ -19,7 +31,7 @@ orthoDr_pdose(x, a, r, ndr = ndr, B.initial = NULL, bw = NULL,
 \item{ndr}{A dimension structure}
 
 \item{B.initial}{Initial \code{B} values. Will use the counting process based
-SIR model \link[orthoDr:CP_SIR]{CP_SIR} as the initial if
+SIR model \link[=CP_SIR]{CP_SIR} as the initial if
 leaving as \code{NULL}. If specified, must be a matrix with
 \code{ncol(x)} rows and \code{ndr} columns. Will be processed by
 Gram-Schmidt if not orthogonal.}

@@ -4,9 +4,19 @@
 \alias{orthoDr_reg}
 \title{Semiparametric dimension reduction method from Ma & Zhu (2012).}
 \usage{
-orthoDr_reg(x, y, method = "sir", ndr = 2, B.initial = NULL,
-  bw = NULL, keep.data = FALSE, control = list(), maxitr = 500,
-  verbose = FALSE, ncore = 0)
+orthoDr_reg(
+  x,
+  y,
+  method = "sir",
+  ndr = 2,
+  B.initial = NULL,
+  bw = NULL,
+  keep.data = FALSE,
+  control = list(),
+  maxitr = 500,
+  verbose = FALSE,
+  ncore = 0
+)
 }
 \arguments{
 \item{x}{A \code{matrix} or \code{data.frame} for features (continous only).

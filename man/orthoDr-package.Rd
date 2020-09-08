@@ -26,7 +26,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Ruoqing Zhu \email{teazrq@gmail.com} (0000-0002-0753-5716) [copyright holder]
+\strong{Maintainer}: Ruoqing Zhu \email{teazrq@gmail.com} (\href{https://orcid.org/0000-0002-0753-5716}{ORCID}) [copyright holder]
 
 Authors:
 \itemize{
@@ -38,7 +38,7 @@ Authors:
 
 Other contributors:
 \itemize{
-  \item James Joseph Balamuta \email{balamut2@illinois.edu} (0000-0003-2826-8458) [contributor]
+  \item James Joseph Balamuta \email{balamut2@illinois.edu} (\href{https://orcid.org/0000-0003-2826-8458}{ORCID}) [contributor]
 }
 
 }

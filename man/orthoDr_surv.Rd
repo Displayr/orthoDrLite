@@ -4,9 +4,20 @@
 \alias{orthoDr_surv}
 \title{Counting Process based semiparametric dimension reduction (IR-CP) model}
 \usage{
-orthoDr_surv(x, y, censor, method = "dm", ndr = ifelse(method ==
-  "forward", 1, 2), B.initial = NULL, bw = NULL, keep.data = FALSE,
-  control = list(), maxitr = 500, verbose = FALSE, ncore = 0)
+orthoDr_surv(
+  x,
+  y,
+  censor,
+  method = "dm",
+  ndr = ifelse(method == "forward", 1, 2),
+  B.initial = NULL,
+  bw = NULL,
+  keep.data = FALSE,
+  control = list(),
+  maxitr = 500,
+  verbose = FALSE,
+  ncore = 0
+)
 }
 \arguments{
 \item{x}{A \code{matrix} or \code{data.frame} for features.
@@ -23,7 +34,7 @@ The algorithm will not scale the columns to unit variance}
 \item{ndr}{The number of directions}
 
 \item{B.initial}{Initial \code{B} values. Will use the counting process based
-SIR model \link[orthoDr:CP_SIR]{CP_SIR} as the initial if
+SIR model \link[=CP_SIR]{CP_SIR} as the initial if
 leaving as \code{NULL}. If specified, must be a matrix with
 \code{ncol(x)} rows and \code{ndr} columns. Will be processed by
 Gram-Schmidt if not orthogonal.}
