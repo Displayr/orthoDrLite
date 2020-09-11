@@ -27,7 +27,7 @@
 #' # gen_solver(B, f, g, env, useg, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose)
 #' # to solve for the parameters B.
 gen_solver <- function(B, f, g, env, useg, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose) {
-    .Call(`_orthoDr_gen_solver`, B, f, g, env, useg, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose)
+    .Call(`_orthoDrLite_gen_solver`, B, f, g, env, useg, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose)
 }
 
 #' @title pdose_direct_solver
@@ -56,7 +56,7 @@ gen_solver <- function(B, f, g, env, useg, rho, eta, gamma, tau, epsilon, btol, 
 #' @references Zhou, W., Zhu, R. "A Parsimonious Personalized Dose Model vis Dimension Reduction." (2018)  \url{https://arxiv.org/abs/1802.06156}.
 #' @references Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434. DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 pdose_direct_solver <- function(B, X, A, a_dist, a_seq, R, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_pdose_direct_solver`, B, X, A, a_dist, a_seq, R, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_pdose_direct_solver`, B, X, A, a_dist, a_seq, R, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title The prediction function for the personalized direct learning dose model
@@ -70,7 +70,7 @@ pdose_direct_solver <- function(B, X, A, a_dist, a_seq, R, lambda, bw, rho, eta,
 #' @param w The kernel ridge regression coefficient
 #' @return The predicted dose
 dosepred <- function(B, X, X_test, bw, W) {
-    .Call(`_orthoDr_dosepred`, B, X, X_test, bw, W)
+    .Call(`_orthoDrLite_dosepred`, B, X, X_test, bw, W)
 }
 
 #' @title pdose_semi_solver
@@ -99,7 +99,7 @@ dosepred <- function(B, X, X_test, bw, W) {
 #' @references Zhou, W., Zhu, R. "A Parsimonious Personalized Dose Model vis Dimension Reduction." (2018)  \url{https://arxiv.org/abs/1802.06156}.
 #' @references Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434. DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 pdose_semi_solver <- function(B, X, R, A, a_dist, a_seq, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_pdose_semi_solver`, B, X, R, A, a_dist, a_seq, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_pdose_semi_solver`, B, X, R, A, a_dist, a_seq, lambda, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title local_f
@@ -107,7 +107,7 @@ pdose_semi_solver <- function(B, X, R, A, a_dist, a_seq, lambda, bw, rho, eta, g
 #' @description local method f value function
 #' @keywords internal
 local_f <- function(B, X, Y, bw, ncore) {
-    .Call(`_orthoDr_local_f`, B, X, Y, bw, ncore)
+    .Call(`_orthoDrLite_local_f`, B, X, Y, bw, ncore)
 }
 
 #' @title local semi regression solver \code{C++} function
@@ -134,7 +134,7 @@ local_f <- function(B, X, Y, bw, ncore) {
 #' DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 #'
 local_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_local_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_local_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title phd_init
@@ -142,7 +142,7 @@ local_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol,
 #' @description phd initial value function
 #' @keywords internal
 phd_init <- function(B, X, Y, bw, ncore) {
-    .Call(`_orthoDr_phd_init`, B, X, Y, bw, ncore)
+    .Call(`_orthoDrLite_phd_init`, B, X, Y, bw, ncore)
 }
 
 #' @title semi-phd solver \code{C++} function
@@ -169,7 +169,7 @@ phd_init <- function(B, X, Y, bw, ncore) {
 #' DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 #'
 phd_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_phd_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_phd_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title save_init
@@ -177,7 +177,7 @@ phd_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, g
 #' @description save initial value function
 #' @keywords internal
 save_init <- function(B, X, Y, bw, ncore) {
-    .Call(`_orthoDr_save_init`, B, X, Y, bw, ncore)
+    .Call(`_orthoDrLite_save_init`, B, X, Y, bw, ncore)
 }
 
 #' @title semi-save solver \code{C++} function
@@ -204,7 +204,7 @@ save_init <- function(B, X, Y, bw, ncore) {
 #' DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 #'
 save_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_save_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_save_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title seff_init
@@ -212,7 +212,7 @@ save_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, 
 #' @description semiparametric efficient method initial value function
 #' @keywords internal
 seff_init <- function(B, X, Y, bw, ncore) {
-    .Call(`_orthoDr_seff_init`, B, X, Y, bw, ncore)
+    .Call(`_orthoDrLite_seff_init`, B, X, Y, bw, ncore)
 }
 
 #' @title Eff semi regression solver \code{C++} function
@@ -239,7 +239,7 @@ seff_init <- function(B, X, Y, bw, ncore) {
 #' DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 #'
 seff_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_seff_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_seff_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title sir_init
@@ -247,7 +247,7 @@ seff_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, 
 #' @description sir initial value function
 #' @keywords internal
 sir_init <- function(B, X, Y, bw, ncore) {
-    .Call(`_orthoDr_sir_init`, B, X, Y, bw, ncore)
+    .Call(`_orthoDrLite_sir_init`, B, X, Y, bw, ncore)
 }
 
 #' @title semi-sir solver \code{C++} function
@@ -274,7 +274,7 @@ sir_init <- function(B, X, Y, bw, ncore) {
 #' DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
 #'
 sir_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_sir_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_sir_solver`, B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title surv_dm_solver \code{C++} function
@@ -308,7 +308,7 @@ sir_solver <- function(B, X, Y, bw, rho, eta, gamma, tau, epsilon, btol, ftol, g
 #' # to solve for the parameters B.
 #'
 surv_dm_solver <- function(B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_surv_dm_solver`, B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_surv_dm_solver`, B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title surv_dn_solver \code{C++} function
@@ -341,7 +341,7 @@ surv_dm_solver <- function(B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsil
 #' # to solve for the parameters B.
 #'
 surv_dn_solver <- function(B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_surv_dn_solver`, B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_surv_dn_solver`, B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title surv_forward_solver \code{C++} function
@@ -374,7 +374,7 @@ surv_dn_solver <- function(B, X, Phit, Fail_Ind, bw, rho, eta, gamma, tau, epsil
 #' # to solve for the parameters B.
 #'
 surv_forward_solver <- function(B, X, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore) {
-    .Call(`_orthoDr_surv_forward_solver`, B, X, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
+    .Call(`_orthoDrLite_surv_forward_solver`, B, X, Fail_Ind, bw, rho, eta, gamma, tau, epsilon, btol, ftol, gtol, maxitr, verbose, ncore)
 }
 
 #' @title KernelDist_cross
@@ -384,6 +384,6 @@ surv_forward_solver <- function(B, X, Fail_Ind, bw, rho, eta, gamma, tau, epsilo
 #' @param TestX testing data
 #' @param X training data
 KernelDist_cross <- function(TestX, X) {
-    .Call(`_orthoDr_KernelDist_cross`, TestX, X)
+    .Call(`_orthoDrLite_KernelDist_cross`, TestX, X)
 }
 
