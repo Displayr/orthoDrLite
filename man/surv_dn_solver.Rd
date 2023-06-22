@@ -57,7 +57,7 @@ surv_dn_solver(
 \item{ncore}{The number of cores for parallel computing}
 }
 \value{
-The optimizer \code{B} for the esitmating equation.
+The optimizer \code{B} for the estimating equation.
 }
 \description{
 The main optimization function for survival dimensional reduction, the IR-CP method. This is an internal function and should not be called directly.
@@ -70,8 +70,8 @@ The main optimization function for survival dimensional reduction, the IR-CP met
 
 }
 \references{
-Sun, Q., Zhu, R., Wang, T. and Zeng, D. "Counting Process Based Dimension Reduction Method for Censored Outcomes." (2017) \url{https://arxiv.org/abs/1704.05046} .
-
-Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434. DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
+Sun, Q., Zhu, R., Wang, T., & Zeng, D. (2019). Counting process-based dimension reduction methods for censored outcomes.
+Biometrika, 106(1), 181-196.
+DOI: \doi{10.1093/biomet/asy064}
 }
 \keyword{internal}
