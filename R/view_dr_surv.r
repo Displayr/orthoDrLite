@@ -42,7 +42,6 @@
 #' Censor <- rbinom(N, 1, 0.8)
 #'
 #' orthoDr.fit <- orthoDr_surv(dataX, Y, Censor, ndr = 1, method = "dm")
-#' view_dr_surv(dataX, Y, Censor, orthoDr.fit$B)
 view_dr_surv <- function(x, y, censor, B = NULL, bw = NULL, FUN = "log", type = "2D", legend.add = TRUE, xlab = "Reduced Direction", ylab = "Time", zlab = "Survival") {
   if (!is.matrix(x)) stop("x must be a matrix")
   if (!is.numeric(x)) stop("x must be numerical")
