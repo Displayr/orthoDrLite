@@ -34,7 +34,7 @@ The algorithm will not scale the columns to unit variance}
 \item{ndr}{The number of directions}
 
 \item{B.initial}{Initial \code{B} values. Will use the counting process based
-SIR model \link[orthoDr:CP_SIR]{CP_SIR} as the initial if
+SIR model \link[=CP_SIR]{CP_SIR} as the initial if
 leaving as \code{NULL}. If specified, must be a matrix with
 \code{ncol(x)} rows and \code{ndr} columns. Will be processed by
 Gram-Schmidt if not orthogonal.}
@@ -95,8 +95,6 @@ dm.fit <- orthoDr_surv(dataX, Y, Censor, method = "dm", ndr = ndr)
 distance(failEDR, dm.fit$B, "dist")
 }
 \references{
-Sun, Q., Zhu, R., Wang, T. and Zeng, D. "Counting Process Based Dimension Reduction Method for Censored Outcomes." (2017)
-DOI: \url{https://arxiv.org/abs/1704.05046}.
-Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434.
-DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
+Sun, Q., Zhu, R., Wang, T., & Zeng, D. (2019). Counting process-based dimension reduction methods for censored outcomes. Biometrika, 106(1), 181-196.
+DOI: \doi{10.1093/biomet/asy064}
 }

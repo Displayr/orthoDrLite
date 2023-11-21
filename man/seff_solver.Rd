@@ -55,10 +55,8 @@ seff_solver(
 Sovling the semiparametric efficient estimating equations. This is an internal function and should not be called directly.
 }
 \references{
-Ma, Y., & Zhu, L. (2013). "Efficient estimation in sufficient dimension reduction." Annals of statistics, 41(1), 250.
-DOI:10.1214/12-AOS1072 \url{https://projecteuclid.org/euclid.aos/1364302742}
-
-Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434.
-DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
+Ma, Y., & Zhu, L. (2013). Efficient estimation in sufficient dimension reduction.
+Annals of statistics, 41(1), 250.
+DOI: \doi{10.1214/12-AOS1072}
 }
 \keyword{internal}

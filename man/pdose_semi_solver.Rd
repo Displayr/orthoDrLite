@@ -70,8 +70,8 @@ The optimizer \code{B} for the esitmating equation.
 The pseudo direct learning optimization function for personalized dose finding with dimension reduction.
 }
 \references{
-Zhou, W., Zhu, R. "A Parsimonious Personalized Dose Model vis Dimension Reduction." (2018)  \url{https://arxiv.org/abs/1802.06156}.
-
-Wen, Z. and Yin, W., "A feasible method for optimization with orthogonality constraints." Mathematical Programming 142.1-2 (2013): 397-434. DOI: \url{https://doi.org/10.1007/s10107-012-0584-1}
+Zhou, W., Zhu, R., & Zeng, D. (2021). A parsimonious personalized dose-finding model via dimension reduction.
+Biometrika, 108(3), 643-659.
+DOI: \doi{10.1093/biomet/asaa087}
 }
 \keyword{internal}
