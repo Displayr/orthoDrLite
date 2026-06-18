@@ -39,13 +39,4 @@ workflows:
             branches:
               only:
                 - master
-      - r-packages/trigger_revdeps:
-          executor: << pipeline.parameters.executor >>
-          requires:
-            - BuildAndCheckPackage
-          context:
-            - r_packages
-          remote_deps: << pipeline.parameters.remote-deps >>
-          plugins_branch: << pipeline.parameters.plugins-branch >>
-          trigger_message: << pipeline.parameters.trigger-message >>
-          triggered_packages: << pipeline.parameters.triggered-packages >>
+
