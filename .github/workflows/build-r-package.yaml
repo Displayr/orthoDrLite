@@ -1,0 +1,18 @@
+name: Build orthoDrLite
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    name: Build orthoDrLite
+    permissions:
+      checks: write
+      contents: read
+    uses: Displayr/nixr-public/.github/workflows/build-flake-installable.yaml@master
+    with:
+      installable-path: pkgs.x86_64-linux.rPackages.orthoDrLite
+      build-args: --override-input orthoDrLite .
+      installable-name: orthoDrLite
+    secrets: inherit
